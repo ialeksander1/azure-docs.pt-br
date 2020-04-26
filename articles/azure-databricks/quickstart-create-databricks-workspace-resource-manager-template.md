@@ -116,6 +116,7 @@ Execute as seguintes tarefas para criar um bloco de notas em Databricks, configu
 
    * **Monte a conta de armazenamento com o DBFS (recomendado)** . Neste snippet, o caminho da conta de Armazenamento do Azure está montado em `/mnt/mypath`. Portanto, em todas as ocorrências futuras em que você acessar a conta de Armazenamento do Azure, não será necessário fornecer o caminho completo. Você pode usar apenas `/mnt/mypath`.
 
+          %scala
           dbutils.fs.mount(
             source = "wasbs://{YOUR CONTAINER NAME}@{YOUR STORAGE ACCOUNT NAME}.blob.core.windows.net/",
             mountPoint = "/mnt/mypath",
